@@ -2,6 +2,19 @@
 * Java 1.8
 * Maven 3 or above
 * Latest chrome browser
+
+#### Allure report installation
+##### For debian-based repositories a PPA is provided:
+```sh
+sudo apt-add-repository ppa:qameta/allure
+sudo apt-get update 
+sudo apt-get install allure
+```
+##### Mac OS X
+For Mas OS, automated installation is available via Homebrew
+```sh
+brew install allure
+```
 #### Use the following command to verify if java and maven is installed on the system
 ```sh
 mvn --version
@@ -15,7 +28,7 @@ Default locale: en_SE, platform encoding: UTF-8
 OS name: "mac os x", version: "10.13.6", arch: "x86_64", family: "mac"
 ```
 
-# Following commands should be executed from project folder
+#### Following commands should be executed from project folder
   - To download only dependencies
 ```sh
 $ mvn dependency:resolve
@@ -48,6 +61,10 @@ $ mvn clean
  - Only chrome & firefox support is added and default is chrome Browser
  - To Switch from chrome to firefox, user has to change parameter in testng.xml at project folder/src/main/resources
  
+#### Generate allure report
+```sh
+allure serve allure-results/
+```
 ### License
 
 
