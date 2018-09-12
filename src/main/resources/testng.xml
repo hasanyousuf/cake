@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cake Web Test Suite" thread-count="1"
+	parallel="none">
+	<suite-files>
+		<suite-file path="src/main/resources/testng.xml" />
+	</suite-files>
+	<listeners>
+		<listener class-name="org.sample.util.TestListener"></listener>
+		<listener class-name="org.sample.util.AnnotationTransformer"></listener>
+	</listeners>
+	<test name="Cake Suite" verbose="2" parallel="none" preserve-order="true">
+		<parameter name="url" value="https://cakesolutions.github.io/cake-qa-test/#/"></parameter>
+		<parameter name="registration_url" value="https://cakesolutions.github.io/cake-qa-test/#/register"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="org.sample.tests.RegistrationPageTest"></class>
+		</classes>
+	</test> 
+		<test name="Cake Suite 2" verbose="2" parallel="none" preserve-order="true">
+		<parameter name="url" value="https://cakesolutions.github.io/cake-qa-test/#/"></parameter>
+		<parameter name="registration_url" value="https://cakesolutions.github.io/cake-qa-test/#/register"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="org.sample.tests.HomePageTest"></class>
+		</classes>
+	</test> 
+</suite>
