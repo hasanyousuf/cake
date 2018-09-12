@@ -43,7 +43,7 @@ $ mvn clean
 ```
 # Documentations/logs path (Surefire-report, java docs, Test application logs)
 
-  - project folder/target/site/surefire-report.html
+  - project folder/target/surefire-report/ExtentReport.html
   - project folder/application.log
 
 ### Project support
